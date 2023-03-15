@@ -1,0 +1,50 @@
+<script id="createAccountTemplate" type="text/template">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+
+	<form class="appbox" method="POST" role="form">
+
+		<h2 class="appbox-heading"><%= __('Sign up for :title', {':title': apptitle}) %></h2>
+
+		<% if (!created) { %>
+
+			<div id="account-email-control" class="form-group">
+				<input class="form-control" id="account-email"
+					type="email" name="email" placeholder="<%= __('Your email') %>…" data-field="email" />
+			</div>
+
+			<div id="account-password-control" class="form-group">
+				<input class="form-control" id="account-password"
+					type="password" name="password" placeholder="<%= __('Your password') %>" data-field="password" />
+			</div>
+
+			<div id="account-password2-control" class="form-group">
+				<input class="form-control" id="account-password2"
+					type="password" name="password2" placeholder="<%= __('Confirm your password') %>" data-field="password2" />
+			</div>
+
+			<div class="alert alert-warning">
+				<%= __('By clicking on &quot;Create an account&quot; below, you will receiving an email which invites you to confirm your new account.') %>
+			</div>
+
+			<div class="appbox-action appbox-action-primary">
+				<button id="account-create-btn" type="submit" class="btn btn-primary btn-lg"><%= __('Create an account') %></button>
+			</div>
+
+		<% } else { %>
+
+			<div class="alert alert-success">
+				<%= __('Your registration is almost complete. Please, check your mailbox to confirm your new account.') %>
+			</div>
+
+		<% } %>
+
+	</form>
+
+			</div>
+		</div>
+	</div>
+
+</script>

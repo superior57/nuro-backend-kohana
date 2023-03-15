@@ -1,0 +1,31 @@
+{# Twig #}
+
+{% for script in APP.script.js -%}
+	{%- if script.async == true -%}
+		<script type="text/javascript" src="{{ script.src }}"
+			{%- for key, value in script.data -%}
+				{%- if key == 'id' -%}
+					{{ '' }} id="{{ value }}"
+				{%- else -%}
+					{{ '' }} data-{{ key }}="{{ value }}"
+				{%- endif -%}
+			{%- endfor -%}
+		></script>
+	{%- endif -%}
+{% endfor %}
+
+{% for type, conf in APP.tracking %}
+
+	{% if conf != false %}
+
+		{% set tracking = conf %}
+		{% set template = 'App/_tracking_' ~ type %}
+		{% include template with tracking %}
+
+	{% endif %}
+
+{% endfor %}
+
+</body>
+</html>
+

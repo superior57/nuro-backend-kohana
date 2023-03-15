@@ -1,0 +1,37 @@
+<script id="modifyAccountLayoutTemplate" type="text/template">
+
+	<div class="container">
+                <div class="row">
+                        <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+
+	<div class="appbox">
+
+		<h2 class="appbox-heading"><%= __('My account') %></h2>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#account-profile-panel" data-toggle="tab"><%= __('Profile') %></a></li>
+			<li><a href="#account-password-panel" data-toggle="tab"><%= __('Password') %></a></li>
+			<li><a href="#account-settings-panel" data-toggle="tab"><%= __('Settings') %></a></li>
+		</ul>
+
+		<div class="tab-content appbox-body">
+			<div class="tab-pane active" id="account-profile-panel">
+				<div id="modify-account-profil-container"></div>
+			</div>
+
+			<div class="tab-pane" id="account-password-panel">
+				<div id="modify-account-password-container"></div>
+			</div>
+
+			<div class="tab-pane" id="account-settings-panel">
+				<div id="modify-account-settings-container"></div>
+			</div>
+		</div>
+
+	</div>
+
+			</div>
+		</div>
+	</div>
+
+</script>

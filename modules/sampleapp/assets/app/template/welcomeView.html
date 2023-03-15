@@ -1,0 +1,130 @@
+<script type="text/template" id="welcomeTemplate">
+
+	<div class="jumbotron masthead" data-stellar-background-ratio="0.5">
+
+		<div class="slogan container">
+			<h1><%= __('Welcome on :title', {':title': title}) %></h1>
+
+			<p>
+				<%= __('This is a demo application using :kohana with REST, :mongodb, :backbonejs and :marionettejs.', {
+					':kohana': '<a href="http://kohanaframework.org" target="_blank">Kohana 3.3+</a>',
+					':mongodb': '<a href="http://www.mongodb.org" target="_blank">MongoDB</a>',
+					':backbonejs': '<a href="http://backbonejs.org" target="_blank">Backbone.js</a>',
+					':marionettejs': '<a href="http://marionettejs.com" target="_blank">Marionette.js</a>' }) %>
+			</p>
+
+			<p>
+				<a href="https://github.com/tchemineau/sample-app" class="btn btn-primary btn-lg btn-download">
+					<%= __('View the project on GitHub') %>
+				</a>
+			</p>
+		</div>
+
+		<div class="links container">
+			<ul class="masthead-links">
+				<li>
+					<iframe src="http://ghbtns.com/github-btn.html?user=tchemineau&repo=sample-app&type=watch&count=true"
+						allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+				</li>
+				<li>
+					<iframe src="http://ghbtns.com/github-btn.html?user=tchemineau&repo=sample-app&type=fork&count=true"
+						allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+				</li>
+				<li class="follow-btn">
+					<iframe class="twitter-follow-button" allowtransparency="true" frameborder="0" scrolling="no"
+						src="//platform.twitter.com/widgets/follow_button.html?id=twitter-widget-0&amp;screen_name=tchemineau&amp;show_screen_name=true&amp;size=m&amp;show_count=false"
+						title="Twitter Follow Button"
+						style="width:160px; height:20px;"></iframe>
+				</li>
+				<li class="tweet-btn">
+					<iframe class="twitter-share-button twitter-count-horizontal" allowtransparency="true" frameborder="0" scrolling="no"
+						src="//platform.twitter.com/widgets/tweet_button.html?id=twitter-widget-1&amp;via=tchemineau&amp;text=A%20demo%20application%20using%20Kohana%203.3+%20with%20REST,%20MongoDB,%20Backbone.js%20and%20Marionette.js"
+						style="width:109px; height:20px;"></iframe>
+				</li>
+			</ul>
+		</div>
+
+		<div class="features">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 col-md-offset-1">
+						<img src="<%= url %>assets/img/sampleapp-fast-128x128.png" class="image" />
+						<h2><%= __('Build faster.') %></h2>
+						<p>
+							<%= __(':title allows you to build your own features. For example, no need to implement REST system, assets manager or i18n mechanism anymore.', {':title': 'Sample-App'}) %>
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<img src="<%= url %>assets/img/sampleapp-code-128x128.png" class="image" />
+						<h2><%= __('Keep organized.') %></h2>
+						<p>
+							<%= __(':title is based on well known frameworks and libraries. Kohana is a powerfull PHP5 framework that will keep your PHP code structured, as well as Marionette.js for your event based Javascript code.', {':title': 'Sample-App'}) %>
+						</p>
+					</div>
+
+					<div class="col-md-3">
+						<img src="<%= url %>assets/img/sampleapp-api-128x128.png" class="image" />
+						<h2><%= __('Use API.') %></h2>
+						<p>
+							<%= __(':title is designed as a rich client application using REST API. The standard API manages user accounts deeply into a MongoDB database.', {':title': 'Sample-App'}) %>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="features-detail" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-12 pull-center">
+						<h2><%= __('Want some more details ?') %></h2>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-5 col-md-offset-1">
+						<ul>
+							<li><%= __('Server side HMVC based on the Kohana framework') %></li>
+							<li><%= __('Client side MVC based on the Marionette.JS framework') %></li>
+							<li><%= __('Use public CDN and Require.JS to load JS and CSS') %></li>
+							<li><%= __('Use the full power of Twig to compose views and templates') %></li>
+							<li><%= __('Full server side and client side support of internationalization') %></li>
+							<li><%= __('Full integration of a simple account workflow') %></li>
+							<li><%= __('Responsive design based on Bootstrap 3') %></li>
+						</ul>
+					</div>
+
+					<div class="col-md-5">
+						<ul>
+							<li><%= __('Simple REST Api which could be extended to your purpose') %></li>
+							<li><%= __('Simple email service using SwiftMailer') %></li>
+							<li><%= __('Simple assets service to manage JS/CSS minification') %></li>
+							<li><%= __('Simple token service to give access to REST API') %></li>
+							<li><%= __('Simple queue service to delegate jobs') %></li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row footer">
+			<div class="span12 text-center">
+				<%= __(':title is licensed under MIT License', {':title': 'Sample-App'}) %> - <a href="https://github.com/tchemineau/sample-app"><%= __('View the project on GitHub') %></a>
+			</div>
+		</div>
+	</div>
+
+</script>
